@@ -1,8 +1,8 @@
 apply plugin: 'maven-publish'
 //apply plugin: 'signing'
 //
-//group = artifactGroup
-//version = artifactVersion
+group = artifactGroup
+version = artifactVersion
 //
 //ext["signing.keyId"] = ''
 //ext["signing.password"] = ''
@@ -29,49 +29,49 @@ apply plugin: 'maven-publish'
 //    ext["sonatypeStagingProfileId"] = System.getenv('SONATYPE_STAGING_PROFILE_ID')
 //}
 //
-//publishing {
-//    publications {
-//        release(MavenPublication) {
-//            groupId "$artifactGroup"
-//            artifactId "$artifactName"
-//            version "$artifactVersion"
-//
-//            from components.java
-//
-//            artifact sourceJar {
-//                classifier "sources"
-//            }
-//            artifact javadocJar
-//
-//            pom {
-//                name = artifactName
-//                description = artifactDescription
-//                url = 'https://github.com/Chimerapps/bitbucketcloud-api'
-//
-//                licenses {
-//                    license {
-//                        name = "The Apache Software License, Version 2.0"
-//                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        name = "Nicola Verbeeck"
-//                        email = "nicola@chimerapps.com"
-//                        organization = "Chimerapps"
-//                    }
-//                }
-//
-//                scm {
-//                    connection = 'scm:git:github.com/Chimerapps/bitbucketcloud-api.git'
-//                    developerConnection = 'scm:git:ssh://github.com/Chimerapps/bitbucketcloud-api.git'
-//                    url = 'https://github.com/Chimerapps/bitbucketcloud-api'
-//                }
-//            }
-//        }
-//    }
-//
-//    repositories {
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId "$artifactGroup"
+            artifactId "$artifactName"
+            version "$artifactVersion"
+
+            from components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+            artifact javadocJar
+
+            pom {
+                name = artifactName
+                description = artifactDescription
+                url = 'https://github.com/jamesfielder/bitbucketcloud-api'
+
+                licenses {
+                    license {
+                        name = "The Apache Software License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+                developers {
+                    developer {
+                        name = "Nicola Verbeeck"
+                        email = "nicola@chimerapps.com"
+                        organization = "Chimerapps"
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:github.com/jamesfielder/bitbucketcloud-api.git'
+                    developerConnection = 'scm:git:ssh://github.com/jamesfielder/bitbucketcloud-api.git'
+                    url = 'https://github.com/jamesfielder/bitbucketcloud-api'
+                }
+            }
+        }
+    }
+
+    repositories {
 //        maven {
 //            // This is an arbitrary name, you may also use "mavencentral" or
 //            // any other name that's descriptive for you
@@ -82,8 +82,8 @@ apply plugin: 'maven-publish'
 //                password ossrhPassword
 //            }
 //        }
-//    }
-//}
+    }
+}
 //
 //signing {
 //    sign publishing.publications
