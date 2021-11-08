@@ -29,4 +29,8 @@ public interface BitbucketApi {
     Call<PullRequest> postPullRequest(@NotNull @Path("user") final String user,
                                       @NotNull @Path("repoSlug") final String repoSlug,
                                       @NotNull @Body final PullRequest pullRequest);
+
+    @GET("repositories/{workspace}/{repoSlug}/commits")
+    Call<PagedList<BaseCommit>> getRepositoryCommits(@NotNull @Path("workspace") final String workspace,
+                                                     @NotNull @Path("repoSlug") final String repoSlug);
 }
