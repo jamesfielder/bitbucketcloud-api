@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 public class Account {
     @NotNull
@@ -33,7 +33,7 @@ public class Account {
 
     @Nullable
     @SerializedName("created_on")
-    private OffsetDateTime mCreatedOn = null;
+    private LocalDateTime mCreatedOn = null;
 
     @NotNull
     @SerializedName("uuid")
@@ -74,7 +74,7 @@ public class Account {
     }
 
     @Nullable
-    public OffsetDateTime getCreatedOn() {
+    public LocalDateTime getCreatedOn() {
         return mCreatedOn;
     }
 

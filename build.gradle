@@ -39,8 +39,8 @@ ext {
     artifactVersion = '0.1.3-SNAPSHOT'
     artifactName = 'bitbucketcloud-api'
     // TODO: Change this back if contributing back
-    //artifactGroup = 'com.chimerapps'
-    artifactGroup = 'com.github.jamesfielder'
+    artifactGroup = 'com.chimerapps'
+//    artifactGroup = 'com.github.jamesfielder'
     artifactDescription = 'Java library for interfacing with the bitbucket cloud api'
 }
 

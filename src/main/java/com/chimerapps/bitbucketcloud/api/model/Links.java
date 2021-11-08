@@ -1,12 +1,17 @@
 package com.chimerapps.bitbucketcloud.api.model;
 
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class Links {
+
+    public Links() { }
+
+    public Links(@NotNull HashMap<String, Href> mLinks) {
+        this.mLinks = mLinks;
+    }
 
     @NotNull
     private HashMap<String, Href> mLinks = new LinkedHashMap<>();
